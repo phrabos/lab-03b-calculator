@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: tomato;
+    height: 100px;
+}
+
+.content {
+    border: 1px solid black;
+    height: 300px;
+    width: 750px;
+    /* display:flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.add{
+    display:flex;
+}
+.subtract {
+    display:flex;
+}
+.multiply{
+    display:flex;
+}
+.divide {
+    display:flex;
+}

@@ -13,7 +13,9 @@ const resDiv = document.getElementById('result-divide');
 //event listeners
 addSubmit.addEventListener("click", () => {
     //calculate value
-    const addResult = Number(addInput1.value) + Number(addInput2.value);
+    const addInputOne = Number(addInput1.value);
+    const addInputTwo = Number(addInput2.value);
+    const addResult = addInputOne + addInputTwo;
     //round result to 2 decimal places
     const roundAddResult = addResult.toFixed(2);
     //display the rounded result in the result box
@@ -29,7 +31,9 @@ addSubmit.addEventListener("click", () => {
 
 subtractSubmit.addEventListener("click", () => {
     //calculate value
-    const subtractResult = Number(subInput1.value)- Number(subInput2.value);
+    const subInputOne = Number(subInput1.value);
+    const subInputTwo = Number(subInput2.value);
+    const subtractResult = subInputOne- subInputTwo;
     //round result to 2 decimal places
     const roundSubResult = subtractResult.toFixed(2);
     //display the rounded result in the result box
@@ -44,7 +48,9 @@ subtractSubmit.addEventListener("click", () => {
 
 multiplySubmit.addEventListener("click", () => {
     //calculate value
-    const multiplyResult = Number(multInput1.value) * Number(multInput2.value);
+    const multInputOne = Number(multInput1.value);
+    const multInputTwo = Number(multInput2.value);
+    const multiplyResult = multInputOne * multInputTwo;
     //round result to 2 decimal places
     const roundMultResult = multiplyResult.toFixed(2);
     //display the rounded result in the result box
@@ -59,7 +65,9 @@ multiplySubmit.addEventListener("click", () => {
 
 divideSubmit.addEventListener("click", () => {
     //calculate value
-    const divideResult = Number((divInput1.value)) / Number((divInput2.value));
+    const divInputOne = Number(divInput1.value);
+    const divInputTwo = Number(divInput2.value);
+    const divideResult = divInputOne / divInputTwo;
     //round result to 2 decimal places
     const roundDivResult = divideResult.toFixed(2);
     //display the rounded result in the result box

@@ -5,14 +5,16 @@ const subButton = document.getElementById("subtract-button");
 const divButton = document.getElementById("divide-button");
 const multButton = document.getElementById("multiply-button");
 
+// array of button IDs used in a for-loop to assign event listeners 
+const buttonArray = document.querySelectorAll("button");
+
+// set event listeners
+for (let i= 0; i < buttonArray.length; i++){
+buttonArray[i].addEventListener("click", calcFunction)
+};
+
 // set variable into global scope
 let whatButtonClicked = "";
-
-//event listeners
-addButton.addEventListener("click", calcFunction);
-subButton.addEventListener("click", calcFunction);
-divButton.addEventListener("click", calcFunction);
-multButton.addEventListener("click", calcFunction);
 
 // function to calculate inputs
 function calcFunction (){
@@ -51,6 +53,9 @@ function calcFunction (){
 
 
 
+// subButton.addEventListener("click", calcFunction);
+// divButton.addEventListener("click", calcFunction);
+// multButton.addEventListener("click", calcFunction);
 
 //selectors
 // const subtractSubmit = document.getElementById("submit-subtract");

@@ -2,16 +2,27 @@
 const resultBox = document.getElementById('result-box');
 const addButton = document.getElementById("add-button");
 const subButton = document.getElementById("subtract-button");
-const divButton = document.getElementById("divide-button");
 const multButton = document.getElementById("multiply-button");
+const divButton = document.getElementById("divide-button");
+const clearButton = document.getElementById("clear-button");
+const inputBoxOne = document.getElementById("input1");
+const inputBoxTwo = document.getElementById("input2");
+
 
 // array of button IDs used in a for-loop to assign event listeners 
 const buttonArray = document.querySelectorAll("button");
 
-// set event listeners
+// set event listeners for operator buttons
 for (let i= 0; i < buttonArray.length; i++){
 buttonArray[i].addEventListener("click", calcFunction)
 };
+
+//set event listener for clear button
+clearButton.addEventListener("click", () =>{
+        inputBoxOne.value="";
+        inputBoxTwo.value="";
+        resultBox.innerText="";
+});
 
 // set variable into global scope
 let whatButtonClicked = "";

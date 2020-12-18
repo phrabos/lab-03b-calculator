@@ -18,17 +18,19 @@
         <header class="header">
             <summary class="header-content">Calculator</summary>
         </header>
-        <main class="content">
-            <section class="one">
-                <input type="number" class="input-box" id="input1" placeholder="input 1">
+        <section class="one">
+            <input type="number" class="input-box" id="input1" placeholder="input 1">
+            <div class="buttons">            
                 <button  id="add-button">+</button>
                 <button  id="subtract-button">-</button>
-                <button  id="divide-button">&divide</button>
                 <button  id="multiply-button">x</button>
-                <input type="number" class="input-box" id="input2" placeholder="input 2">
-                <p class="result" id="result-box"></p>
-            </section>
-        </main>    
+                <button  id="divide-button">&divide</button>
+                <button  id="clear-button">cl</button>
+            </div>
+            <input type="number" class="input-box" id="input2" placeholder="input 2">
+            <p>result</p>
+            <p class="result" id="result-box"></p>
+        </section>    
     </main>
     <script src="app.js"></script>
 </body>

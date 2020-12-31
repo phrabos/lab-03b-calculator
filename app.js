@@ -1,21 +1,50 @@
+//imports
+
 //selectors
+const nums = [1,2,3];
 const resultBox = document.getElementById('result-box');
-const addButton = document.getElementById("add-button");
-const subButton = document.getElementById("subtract-button");
-const multButton = document.getElementById("multiply-button");
-const divButton = document.getElementById("divide-button");
 const clearButton = document.getElementById("clear-button");
 const inputBoxOne = document.getElementById("input1");
 const inputBoxTwo = document.getElementById("input2");
-
-
 // array of button IDs used in a for-loop to assign event listeners 
 const buttonArray = document.querySelectorAll("button");
-
+let whatButtonClicked = "";
 // set event listeners for operator buttons
 for (let i= 0; i < buttonArray.length; i++){
 buttonArray[i].addEventListener("click", calcFunction)
+
 };
+// function to calculate inputs
+
+function calcFunction () {
+        // set inputs to a number value
+        const inputOne = Number(input1.value);
+        const inputTwo = Number(input2.value);
+    
+    
+        // set the variable to the ID of the button clicked
+        whatButtonClicked=this.id
+    
+            // compare ID of button clicked to ID of math operators
+            switch (whatButtonClicked) {
+                    case "add-button":
+                        const addResult = inputOne + inputTwo;    
+                        resultBox.innerText = addResult;
+                        break;
+                    case "subtract-button":
+                        const subResult = inputOne - inputTwo;    
+                        resultBox.innerText = subResult;
+                        break;
+                    case "divide-button":
+                        const divResult = inputOne / inputTwo;    
+                        resultBox.innerText = divResult;
+                        break;  
+                    case "multiply-button":
+                        const multResult = inputOne * inputTwo;    
+                        resultBox.innerText = multResult;
+                        break;    
+                }
+    };
 
 //set event listener for clear button
 clearButton.addEventListener("click", () =>{
@@ -24,38 +53,9 @@ clearButton.addEventListener("click", () =>{
         resultBox.innerText="";
 });
 
-// set variable into global scope
-let whatButtonClicked = "";
 
-// function to calculate inputs
-function calcFunction (){
-    // set inputs to a number value
-    const inputOne = Number(input1.value);
-    const inputTwo = Number(input2.value);
 
-    // set the variable to the ID of the button clicked
-    whatButtonClicked=this.id
 
-        // compare ID of button clicked to ID of math operators
-        switch (whatButtonClicked) {
-                case "add-button":
-                    const addResult = inputOne + inputTwo;    
-                    resultBox.innerText = addResult;
-                    break;
-                case "subtract-button":
-                    const subResult = inputOne - inputTwo;    
-                    resultBox.innerText = subResult;
-                    break;
-                case "divide-button":
-                    const divResult = inputOne / inputTwo;    
-                    resultBox.innerText = divResult;
-                    break;  
-                case "multiply-button":
-                    const multResult = inputOne * inputTwo;    
-                    resultBox.innerText = multResult;
-                    break;    
-            }
-};
 
 
 

@@ -9,6 +9,20 @@ const addButton = document.getElementById("add-button");
 const subButton = document.getElementById("subtract-button");
 const multButton = document.getElementById("multiply-button");
 const divButton = document.getElementById("divide-button");
+
+//number selectors
+const one = document.getElementById("one");
+const two = document.getElementById("two");
+const three = document.getElementById("three");
+const four = document.getElementById("four");
+const five = document.getElementById("five");
+const six = document.getElementById("six");
+const seven = document.getElementById("seven");
+const eight = document.getElementById("eight");
+const nine = document.getElementById("nine");
+const zero = document.getElementById("zero");
+
+
 let inputArray = [];
 
 
@@ -59,8 +73,80 @@ clearButton.addEventListener("click", () =>{
     inputArray = [];
 });
 
+// set event listener for number buttons
+one.addEventListener("click", () => {
+    inputArray.push(inputBoxOne.value);
+    inputArray.push("1");
+    const newInputString = inputArray.toString().replace(",","");
+    inputBoxOne.value=newInputString;
+    inputArray=[];
+});
 
+two.addEventListener("click", () => {
+    inputArray.push(inputBoxOne.value);
+    inputArray.push("2");
+    const newInputString = inputArray.toString().replace(",","");
+    inputBoxOne.value=newInputString;
+    inputArray=[];
+});
 
+three.addEventListener("click", () => {
+    inputArray.push(inputBoxOne.value);
+    inputArray.push("3");
+    const newInputString = inputArray.toString().replace(",","");
+    inputBoxOne.value=newInputString;
+    inputArray=[];
+});
+
+four.addEventListener("click", () => {
+    inputArray.push(inputBoxOne.value);
+    inputArray.push("4");
+    const newInputString = inputArray.toString().replace(",","");
+    inputBoxOne.value=newInputString;
+    inputArray=[];
+});
+five.addEventListener("click", () => {
+    inputArray.push(inputBoxOne.value);
+    inputArray.push("5");
+    const newInputString = inputArray.toString().replace(",","");
+    inputBoxOne.value=newInputString;
+    inputArray=[];
+});
+six.addEventListener("click", () => {
+    inputArray.push(inputBoxOne.value);
+    inputArray.push("6");
+    const newInputString = inputArray.toString().replace(",","");
+    inputBoxOne.value=newInputString;
+    inputArray=[];
+});
+seven.addEventListener("click", () => {
+    inputArray.push(inputBoxOne.value);
+    inputArray.push("7");
+    const newInputString = inputArray.toString().replace(",","");
+    inputBoxOne.value=newInputString;
+    inputArray=[];
+});
+eight.addEventListener("click", () => {
+    inputArray.push(inputBoxOne.value);
+    inputArray.push("8");
+    const newInputString = inputArray.toString().replace(",","");
+    inputBoxOne.value=newInputString;
+    inputArray=[];
+});
+nine.addEventListener("click", () => {
+    inputArray.push(inputBoxOne.value);
+    inputArray.push("9");
+    const newInputString = inputArray.toString().replace(",","");
+    inputBoxOne.value=newInputString;
+    inputArray=[];
+});
+zero.addEventListener("click", () => {
+    inputArray.push(inputBoxOne.value);
+    inputArray.push("0");
+    const newInputString = inputArray.toString().replace(",","");
+    inputBoxOne.value=newInputString;
+    inputArray=[];
+});
 
 
 

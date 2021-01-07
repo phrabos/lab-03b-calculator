@@ -18,7 +18,7 @@ addButton.addEventListener("click", () => {
     inputArray.push("+");
     const newInputString = inputArray.toString().replace(",","");
     inputBoxOne.value=newInputString;
-    // inputArray=[];
+    inputArray=[];
 });
 
 subButton.addEventListener("click", () => {

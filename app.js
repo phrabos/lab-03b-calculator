@@ -22,9 +22,8 @@ const eight = document.getElementById("eight");
 const nine = document.getElementById("nine");
 const zero = document.getElementById("zero");
 
-
+// array to store input display while buttons are clicked
 let inputArray = [];
-
 
 // set event listeners for operator buttons
 addButton.addEventListener("click", () => {
@@ -58,8 +57,6 @@ divButton.addEventListener("click", () => {
     inputBoxOne.value=newInputString;
     inputArray=[];
 });
-
-
 
 equalsButton.addEventListener("click", () => {
     let result = eval(inputBoxOne.value);

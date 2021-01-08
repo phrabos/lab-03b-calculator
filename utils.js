@@ -1,7 +1,7 @@
 //imports
 import { inputArray, resetArray } from "./app.js";
 
-// function to calculate inputs
+//O function to calculate inputs
 const inputBoxOne = document.getElementById("input1");
 const resultBox = document.getElementById('result-box');
 

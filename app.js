@@ -1,5 +1,5 @@
 //imports
-import { onAddClick, onSubClick, onMultClick, onDivClick, onEqualsClick, onClearClick, onOneClick, onTwoClick, onThreeClick, onFourClick, onFiveClick, onSixClick, onSevenClick, onEightClick, onNineClick, onZeroClick } from "./handlers.js";
+import { onEqualsClick, onClearClick, onNumClick, onOperatorClick } from "./handlers.js";
 //exports
 export let inputArray = [];
 export function resetArray(){
@@ -26,26 +26,26 @@ const nine = document.getElementById("nine");
 const zero = document.getElementById("zero");
 
 // set event listeners for operator buttons
-addButton.addEventListener("click", onAddClick);
-subButton.addEventListener("click", onSubClick);
-multButton.addEventListener("click", onMultClick);
-divButton.addEventListener("click", onDivClick);
+addButton.addEventListener("click", onOperatorClick);
+subButton.addEventListener("click", onOperatorClick);
+multButton.addEventListener("click", onOperatorClick);
+divButton.addEventListener("click", onOperatorClick);
 equalsButton.addEventListener("click", onEqualsClick);
 
 //set event listener for clear button
 clearButton.addEventListener("click", onClearClick);
 
 // set event listener for number buttons
-one.addEventListener("click", onOneClick);
-two.addEventListener("click", onTwoClick);
-three.addEventListener("click", onThreeClick);
-four.addEventListener("click", onFourClick);
-five.addEventListener("click", onFiveClick);
-six.addEventListener("click", onSixClick);
-seven.addEventListener("click", onSevenClick);
-eight.addEventListener("click", onEightClick);
-nine.addEventListener("click", onNineClick);
-zero.addEventListener("click", onZeroClick);
+one.addEventListener("click", onNumClick);
+two.addEventListener("click", onNumClick);
+three.addEventListener("click", onNumClick);
+four.addEventListener("click", onNumClick);
+five.addEventListener("click", onNumClick);
+six.addEventListener("click", onNumClick);
+seven.addEventListener("click", onNumClick);
+eight.addEventListener("click", onNumClick);
+nine.addEventListener("click", onNumClick);
+zero.addEventListener("click", onNumClick);
 
 
 

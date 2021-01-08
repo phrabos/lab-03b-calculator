@@ -1,8 +1,11 @@
 //imports
-
+import { onAddClick, onSubClick, onMultClick, onDivClick, onEqualsClick, onClearClick, onOneClick, onTwoClick, onThreeClick, onFourClick, onFiveClick, onSixClick, onSevenClick, onEightClick, onNineClick, onZeroClick } from "./handlers.js";
+//exports
+export let inputArray = [];
+export function resetArray(){
+    inputArray=[];
+}
 //selectors
-const inputBoxOne = document.getElementById("input1");
-const resultBox = document.getElementById('result-box');
 const clearButton = document.getElementById("clear-button");
 const equalsButton = document.getElementById("equal-button");
 const addButton = document.getElementById("add-button");
@@ -22,128 +25,27 @@ const eight = document.getElementById("eight");
 const nine = document.getElementById("nine");
 const zero = document.getElementById("zero");
 
-// array to store input display while buttons are clicked
-let inputArray = [];
-
 // set event listeners for operator buttons
-addButton.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("+");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
-
-subButton.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("-");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
-
-multButton.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("*");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
-
-divButton.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("/");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
-
-equalsButton.addEventListener("click", () => {
-    let result = eval(inputBoxOne.value);
-    resultBox.textContent= result;  
-});
+addButton.addEventListener("click", onAddClick);
+subButton.addEventListener("click", onSubClick);
+multButton.addEventListener("click", onMultClick);
+divButton.addEventListener("click", onDivClick);
+equalsButton.addEventListener("click", onEqualsClick);
 
 //set event listener for clear button
-clearButton.addEventListener("click", () =>{
-    inputBoxOne.value="";
-    resultBox.textContent="";
-    inputArray = [];
-});
+clearButton.addEventListener("click", onClearClick);
 
 // set event listener for number buttons
-one.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("1");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
-
-two.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("2");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
-
-three.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("3");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
-
-four.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("4");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
-five.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("5");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
-six.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("6");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
-seven.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("7");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
-eight.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("8");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
-nine.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("9");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
-zero.addEventListener("click", () => {
-    inputArray.push(inputBoxOne.value);
-    inputArray.push("0");
-    const newInputString = inputArray.toString().replace(",","");
-    inputBoxOne.value=newInputString;
-    inputArray=[];
-});
+one.addEventListener("click", onOneClick);
+two.addEventListener("click", onTwoClick);
+three.addEventListener("click", onThreeClick);
+four.addEventListener("click", onFourClick);
+five.addEventListener("click", onFiveClick);
+six.addEventListener("click", onSixClick);
+seven.addEventListener("click", onSevenClick);
+eight.addEventListener("click", onEightClick);
+nine.addEventListener("click", onNineClick);
+zero.addEventListener("click", onZeroClick);
 
 
 

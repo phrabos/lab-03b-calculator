@@ -1,5 +1,5 @@
 //imports
-import { onEqualsClick, onClearClick, onNumClick, onOperatorClick } from "./handlers.js";
+import { onEqualsClick, onClearClick, onNumClick } from "./handlers.js";
 //exports
 export let inputArray = [];
 export function resetArray(){
@@ -26,10 +26,10 @@ const nine = document.getElementById("nine");
 const zero = document.getElementById("zero");
 
 // set event listeners for operator buttons
-addButton.addEventListener("click", onOperatorClick);
-subButton.addEventListener("click", onOperatorClick);
-multButton.addEventListener("click", onOperatorClick);
-divButton.addEventListener("click", onOperatorClick);
+addButton.addEventListener("click", onNumClick);
+subButton.addEventListener("click", onNumClick);
+multButton.addEventListener("click", onNumClick);
+divButton.addEventListener("click", onNumClick);
 equalsButton.addEventListener("click", onEqualsClick);
 
 //set event listener for clear button
